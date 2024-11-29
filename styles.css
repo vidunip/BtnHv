@@ -1,0 +1,874 @@
+@font-face {
+    font-family: 'San Francisco';
+    src: url('SanFrancisco.ttf') format('truetype');
+}
+
+/* Base styles and container */
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+    background: #000000;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    max-width: 90vw;
+}
+
+/* Base button styles */
+button {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'San Francisco', system-ui, -apple-system, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    background: #a4a4a4;
+    position: relative;
+    overflow: hidden;
+    min-width: 120px;
+}
+
+/* Individual button hover effects */
+
+.btn-1:hover {
+    transform: scale(1.1) rotate(5deg);
+    background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+    color: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn-2:hover {
+    animation: shake 0.5s infinite;
+    background: #6c5ce7;
+    color: white;
+}
+
+.btn-3:hover {
+    transform: translateY(-5px);
+    background: #a8e6cf;
+    letter-spacing: 3px;
+}
+
+.btn-4:hover {
+    border-radius: 25px;
+    background: #ff8b94;
+    transform: scale(0.9);
+}
+
+.btn-5:hover {
+    box-shadow: inset 0 0 0 2em #ffd3b6;
+    color: white;
+}
+
+.btn-6:hover {
+    animation: rainbow 1s infinite;
+    transform: rotate(360deg);
+}
+
+.btn-7:hover {
+    background: black;
+    color: white;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+
+.btn-8:hover {
+    transform: perspective(500px) rotateX(45deg);
+    background: #00b894;
+    color: white;
+}
+
+.btn-9:hover {
+    animation: bounce 0.5s infinite;
+    background: #fd79a8;
+    color: white;
+}
+
+.btn-10:hover {
+    transform: skew(-10deg);
+    background: #6c5ce7;
+    color: white;
+}
+
+.btn-11:hover {
+    filter: hue-rotate(180deg);
+    transform: scale(1.1);
+    background: #55efc4;
+}
+
+.btn-12:hover {
+    animation: pulse 1s infinite;
+    background: #fab1a0;
+}
+
+.btn-13:hover {
+    box-shadow: 10px 10px 0 #ffeaa7;
+    transform: translate(-5px, -5px);
+}
+
+.btn-14:hover {
+    background: transparent;
+    outline: 2px solid #ff7675;
+    color: #ff7675;
+    font-weight: bold;
+}
+
+.btn-15:hover {
+    animation: glitch 0.3s infinite;
+    background: #0984e3;
+    color: white;
+}
+
+.btn-16:hover {
+    transform: rotateY(180deg);
+    background: #00cec9;
+    color: white;
+}
+
+.btn-17:hover {
+    filter: blur(1px);
+    background: #e17055;
+    transform: scale(1.2);
+}
+
+.btn-18:hover {
+    background: repeating-linear-gradient(45deg, #2d3436 0%, #2d3436 10%, #636e72 10%, #636e72 20%);
+    color: white;
+}
+
+.btn-19:hover {
+    animation: wobble 0.5s infinite;
+    background: #00b894;
+}
+
+.btn-20:hover {
+    box-shadow: 0 0 10px #fdcb6e, 0 0 20px #fdcb6e, 0 0 40px #fdcb6e;
+    background: #fdcb6e;
+}
+
+/* Animations */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+@keyframes rainbow {
+    0% { background: red; }
+    20% { background: orange; }
+    40% { background: yellow; }
+    60% { background: green; }
+    80% { background: blue; }
+    100% { background: purple; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes wobble {
+    0%, 100% { transform: rotate(0); }
+    25% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+}
+
+/* Additional button hover effects (21-30) */
+.btn-21:hover {
+    background: conic-gradient(from 0deg, #ff0000, #ff8000, #ffff00, #80ff00, #00ff00, #00ff80, #00ffff, #0080ff, #0000ff, #8000ff, #ff0080, #ff0000);
+    color: white;
+    transform: rotate(720deg);
+}
+
+.btn-22:hover {
+    clip-path: circle(50% at 50% 50%);
+    background: #e056fd;
+    color: white;
+}
+
+.btn-23:hover {
+    transform: scale(1.1) skewX(20deg);
+    background: #686de0;
+    color: white;
+}
+
+.btn-24:hover {
+    box-shadow: inset -100px 0 0 0 #30336b;
+    color: white;
+}
+
+.btn-25:hover {
+    animation: flip 0.6s;
+    background: #badc58;
+}
+
+.btn-26:hover {
+    border-radius: 0;
+    background: #eb4d4b;
+    transform: translate(5px, -5px);
+}
+
+.btn-27:hover {
+    filter: contrast(200%);
+    background: #7ed6df;
+    transform: scale(0.95);
+}
+
+.btn-28:hover {
+    box-shadow: 0 0 0 5px #686de0;
+    animation: pulse 1s infinite;
+}
+
+.btn-29:hover {
+    background: repeating-radial-gradient(circle, #ff7979, #ff7979 10px, #badc58 10px, #badc58 20px);
+}
+
+.btn-30:hover {
+    transform: perspective(500px) rotateY(180deg);
+    background: #22a6b3;
+    color: white;
+}
+
+@keyframes flip {
+    0% { transform: rotateX(0); }
+    100% { transform: rotateX(360deg); }
+}
+
+/* More button hover effects (31-60) */
+.btn-31:hover {
+    background: #000;
+    -webkit-mask: linear-gradient(-60deg, #000 30%, #0005, #000 70%) right/300% 100%;
+    animation: shimmer 2s infinite;
+    color: white;
+}
+
+.btn-32:hover {
+    transform: rotate3d(1, 1, 0, 45deg);
+    background: #e056fd;
+    box-shadow: 0 0 20px rgba(224, 86, 253, 0.6);
+}
+
+.btn-33:hover {
+    animation: jelly 0.5s;
+    background: #ff9ff3;
+}
+
+.btn-34:hover {
+    outline: 3px solid #48dbfb;
+    outline-offset: 3px;
+    transform: scale(1.05);
+}
+
+.btn-35:hover {
+    background: repeating-linear-gradient(
+        -45deg,
+        #ff6b6b,
+        #ff6b6b 10px,
+        #ff9ff3 10px,
+        #ff9ff3 20px
+    );
+    color: white;
+}
+
+.btn-36:hover {
+    filter: brightness(1.5) contrast(1.5);
+    animation: tilt 0.3s infinite;
+}
+
+.btn-37:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 100%, 0 70%);
+    background: #1dd1a1;
+    color: white;
+}
+
+.btn-38:hover {
+    transform: translateX(10px) scale(1.1);
+    background: linear-gradient(to right, #ff9ff3, #feca57);
+    color: white;
+}
+
+.btn-39:hover {
+    box-shadow: 
+        5px 5px #ff6b6b,
+        10px 10px #48dbfb,
+        15px 15px #1dd1a1;
+    transform: translate(-15px, -15px);
+}
+
+.btn-40:hover {
+    animation: spin-bounce 0.6s;
+    background: #54a0ff;
+    color: white;
+}
+
+.btn-41:hover {
+    background: conic-gradient(from 0deg at 50% 50%, #ff6b6b, #feca57, #1dd1a1, #54a0ff, #ff6b6b);
+    animation: rotate-hue 2s linear infinite;
+}
+
+.btn-42:hover {
+    transform: skewY(10deg) translateY(-5px);
+    background: #576574;
+    color: white;
+}
+
+.btn-43:hover {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5);
+    background: #2e86de;
+    color: white;
+}
+
+.btn-44:hover {
+    animation: squeeze 0.5s;
+    background: #ff9f43;
+}
+
+.btn-45:hover {
+    background: 
+        linear-gradient(#0000 0 0) padding-box,
+        linear-gradient(45deg, #ff6b6b, #54a0ff) border-box;
+    border: 3px solid transparent;
+    transform: scale(1.1);
+}
+
+/* Additional animations */
+@keyframes shimmer {
+    0% { -webkit-mask-position: right }
+    100% { -webkit-mask-position: left }
+}
+
+@keyframes jelly {
+    0%, 100% { transform: scale(1); }
+    25% { transform: scale(0.95, 1.05); }
+    50% { transform: scale(1.05, 0.95); }
+    75% { transform: scale(0.95, 1.05); }
+}
+
+@keyframes tilt {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(2deg); }
+    75% { transform: rotate(-2deg); }
+}
+
+@keyframes spin-bounce {
+    0% { transform: rotate(0); }
+    50% { transform: rotate(180deg) scale(1.2); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes rotate-hue {
+    100% { filter: hue-rotate(360deg); }
+}
+
+@keyframes squeeze {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(0.85) scaleY(1.15); }
+}
+
+/* Even more buttons (46-60) */
+.btn-46:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 25px #000;
+    animation: glitch-2 0.4s infinite;
+}
+
+.btn-47:hover {
+    transform: perspective(500px) translateZ(50px);
+    background: #ee5253;
+    color: white;
+}
+
+.btn-48:hover {
+    animation: rubber-band 0.8s;
+    background: #2e86de;
+}
+
+.btn-49:hover {
+    background: repeating-radial-gradient(
+        circle at center,
+        #ff9f43,
+        #ff9f43 10px,
+        #ee5253 10px,
+        #ee5253 20px
+    );
+    transform: scale(1.1);
+}
+
+.btn-50:hover {
+    clip-path: circle(100% at 50% 50%);
+    background: #ff6b6b;
+    animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+.btn-51:hover {
+    transform: rotateX(180deg) translateY(10px);
+    background: #576574;
+    color: white;
+}
+
+.btn-52:hover {
+    box-shadow: 
+        inset -3em 0 0 0 #ff6b6b,
+        inset 3em 0 0 0 #54a0ff;
+    color: white;
+}
+
+.btn-53:hover {
+    animation: shake-vertical 0.8s;
+    background: linear-gradient(45deg, #ff6b6b, #ffd32a);
+}
+
+.btn-54:hover {
+    transform: rotate(-10deg) scale(1.1);
+    background: #1dd1a1;
+    box-shadow: 0 0 20px rgba(29, 209, 161, 0.6);
+}
+
+.btn-55:hover {
+    background: #000;
+    color: #fff;
+    text-shadow: 0 0 5px #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.btn-56:hover {
+    animation: bounce-in 0.5s;
+    background: #ff9ff3;
+}
+
+.btn-57:hover {
+    transform: translateX(-5px) rotateY(-20deg);
+    background: #48dbfb;
+    color: white;
+}
+
+.btn-58:hover {
+    outline: 2px solid #ff6b6b;
+    outline-offset: -8px;
+    background: transparent;
+    color: #ff6b6b;
+}
+
+.btn-59:hover {
+    animation: flip-vertical 0.6s;
+    background: #feca57;
+}
+
+.btn-60:hover {
+    transform: scale(0.9) rotate(3deg);
+    background: linear-gradient(to right, #48dbfb, #1dd1a1);
+    color: white;
+}
+
+/* New animations */
+@keyframes glitch-2 {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes rubber-band {
+    0% { transform: scale(1); }
+    30% { transform: scaleX(1.25) scaleY(0.75); }
+    40% { transform: scaleX(0.75) scaleY(1.25); }
+    60% { transform: scaleX(1.15) scaleY(0.85); }
+    100% { transform: scale(1); }
+}
+
+@keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7); }
+    100% { box-shadow: 0 0 0 20px rgba(255, 107, 107, 0); }
+}
+
+@keyframes shake-vertical {
+    0%, 100% { transform: translateY(0); }
+    20% { transform: translateY(-5px); }
+    40% { transform: translateY(5px); }
+    60% { transform: translateY(-3px); }
+    80% { transform: translateY(3px); }
+}
+
+@keyframes bounce-in {
+    0% { transform: scale(0.3); opacity: 0; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes flip-vertical {
+    0% { transform: rotateX(0); }
+    100% { transform: rotateX(360deg); }
+}
+
+/* Final set of buttons (61-100) */
+.btn-61:hover {
+    background: #000;
+    color: #fff;
+    box-shadow: 0 0 10px #fff,
+                0 0 20px #fff,
+                0 0 40px #fff;
+    animation: neon-pulse 1s infinite;
+}
+
+.btn-62:hover {
+    transform: rotate(720deg) scale(0.7);
+    background: #ff6b6b;
+    transition: all 0.8s;
+}
+
+.btn-63:hover {
+    background: linear-gradient(45deg, #ff6b6b 25%, transparent 25%) -50px 0,
+                linear-gradient(-45deg, #ff6b6b 25%, transparent 25%) -50px 0;
+    background-size: 50px 50px;
+    color: white;
+    animation: stripes 1s linear infinite;
+}
+
+.btn-64:hover {
+    filter: blur(2px) brightness(1.5);
+    background: #54a0ff;
+    transform: scale(1.2);
+}
+
+.btn-65:hover {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    background: #ff9ff3;
+    transform: translateY(-5px);
+}
+
+.btn-66:hover {
+    animation: swing 0.6s ease-out;
+    background: #ffd32a;
+}
+
+.btn-67:hover {
+    background: conic-gradient(#ff6b6b, #ffd32a, #1dd1a1, #54a0ff);
+    animation: spin-colors 2s linear infinite;
+}
+
+.btn-68:hover {
+    transform: skew(-20deg, 10deg);
+    background: #576574;
+    color: white;
+}
+
+.btn-69:hover {
+    box-shadow: inset 0 0 0 4px #ff6b6b;
+    background: transparent;
+    color: #ff6b6b;
+    animation: outline-pulse 1s infinite;
+}
+
+.btn-70:hover {
+    transform: translateZ(20px) rotateX(20deg);
+    background: linear-gradient(#48dbfb, #1dd1a1);
+    color: white;
+}
+
+.btn-71:hover {
+    animation: shake-crazy 0.5s;
+    background: #ee5253;
+}
+
+.btn-72:hover {
+    background: repeating-linear-gradient(
+        45deg,
+        #ff6b6b,
+        #ff6b6b 10px,
+        #ffd32a 10px,
+        #ffd32a 20px
+    );
+    transform: scale(0.9) rotate(-3deg);
+}
+
+.btn-73:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 20% 50%);
+    background: #2e86de;
+    color: white;
+}
+
+.btn-74:hover {
+    transform: perspective(500px) rotateY(180deg);
+    background: #ff9f43;
+    color: white;
+}
+
+.btn-75:hover {
+    animation: bounce-rotate 0.6s;
+    background: #1dd1a1;
+}
+
+.btn-76:hover {
+    background: linear-gradient(transparent 50%, #ff6b6b 50%);
+    background-size: 100% 200%;
+    animation: reveal 0.5s forwards;
+    color: white;
+}
+
+.btn-77:hover {
+    transform: scale(1.1) rotate(-3deg);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    background: #576574;
+    color: white;
+}
+
+.btn-78:hover {
+    animation: wobble-skew 0.5s;
+    background: #ff9ff3;
+}
+
+.btn-79:hover {
+    background: #000;
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff;
+    box-shadow: 0 0 20px #000;
+}
+
+.btn-80:hover {
+    transform: rotate3d(1, 1, 1, 45deg);
+    background: #48dbfb;
+    color: white;
+}
+
+.btn-81:hover {
+    animation: split-apart 0.5s forwards;
+    background: #feca57;
+}
+
+.btn-82:hover {
+    background: repeating-radial-gradient(
+        circle at 50% 50%,
+        #ff6b6b,
+        #ff6b6b 5px,
+        #54a0ff 5px,
+        #54a0ff 10px
+    );
+    transform: scale(1.1);
+}
+
+.btn-83:hover {
+    clip-path: circle(50% at 0% 50%);
+    background: #ee5253;
+    animation: circle-reveal 0.5s forwards;
+}
+
+.btn-84:hover {
+    transform: rotateX(180deg) translateY(10px);
+    background: #1dd1a1;
+    color: white;
+}
+
+.btn-85:hover {
+    animation: squeeze-horizontal 0.5s;
+    background: #ff9f43;
+}
+
+.btn-86:hover {
+    background: linear-gradient(45deg, #ff6b6b 25%, transparent 25%),
+                linear-gradient(-45deg, #ff6b6b 25%, transparent 25%);
+    background-size: 20px 20px;
+    color: white;
+    animation: pattern-move 1s linear infinite;
+}
+
+.btn-87:hover {
+    transform: scale(0.8) rotate(10deg);
+    background: #576574;
+    box-shadow: 5px 5px 0 #ff6b6b;
+}
+
+.btn-88:hover {
+    animation: flip-scale 0.6s;
+    background: #48dbfb;
+}
+
+.btn-89:hover {
+    background: #000;
+    color: #fff;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 25% 50%);
+}
+
+.btn-90:hover {
+    transform: translateX(10px) skewY(-10deg);
+    background: linear-gradient(to right, #ff9ff3, #feca57);
+    color: white;
+}
+
+.btn-91:hover {
+    animation: bounce-flip 0.6s;
+    background: #54a0ff;
+}
+
+.btn-92:hover {
+    background: repeating-conic-gradient(
+        from 0deg,
+        #ff6b6b 0deg 10deg,
+        #54a0ff 10deg 20deg
+    );
+    transform: rotate(360deg);
+}
+
+.btn-93:hover {
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    background: #ee5253;
+    animation: octagon-spin 0.6s;
+}
+
+.btn-94:hover {
+    transform: perspective(500px) translateZ(30px);
+    background: #1dd1a1;
+    box-shadow: 0 0 20px rgba(29, 209, 161, 0.6);
+}
+
+.btn-95:hover {
+    animation: diagonal-slide 0.5s;
+    background: #ff9f43;
+}
+
+.btn-96:hover {
+    background: linear-gradient(45deg, #ff6b6b, transparent);
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.5);
+    transform: scale(1.1);
+}
+
+.btn-97:hover {
+    transform: rotate(-720deg) scale(0.5);
+    background: #576574;
+    transition: all 1s;
+}
+
+.btn-98:hover {
+    animation: shake-opacity 0.5s;
+    background: #48dbfb;
+}
+
+.btn-99:hover {
+    background: #000;
+    color: #fff;
+    clip-path: circle(100% at 50% 50%);
+    animation: ripple-out 0.5s;
+}
+
+.btn-100:hover {
+    transform: scale(1.5) rotate(45deg);
+    background: linear-gradient(to right, #ff6b6b, #54a0ff, #1dd1a1);
+    color: white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+}
+
+/* Additional animations */
+@keyframes neon-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+@keyframes stripes {
+    0% { background-position: 0 0; }
+    100% { background-position: 50px 0; }
+}
+
+@keyframes spin-colors {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes outline-pulse {
+    0%, 100% { box-shadow: inset 0 0 0 4px #ff6b6b; }
+    50% { box-shadow: inset 0 0 0 8px #ff6b6b; }
+}
+
+@keyframes shake-crazy {
+    0%, 100% { transform: translate(0, 0) rotate(0); }
+    25% { transform: translate(5px, -5px) rotate(10deg); }
+    50% { transform: translate(-5px, 5px) rotate(-10deg); }
+    75% { transform: translate(5px, 5px) rotate(5deg); }
+}
+
+@keyframes reveal {
+    100% { background-position: 0 -100%; }
+}
+
+@keyframes wobble-skew {
+    0%, 100% { transform: skew(0); }
+    25% { transform: skew(10deg); }
+    75% { transform: skew(-10deg); }
+}
+
+@keyframes split-apart {
+    100% { clip-path: polygon(0 0, 45% 0, 45% 100%, 0 100%, 55% 0, 100% 0, 100% 100%, 55% 100%); }
+}
+
+@keyframes circle-reveal {
+    100% { clip-path: circle(150% at 0% 50%); }
+}
+
+@keyframes squeeze-horizontal {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(0.7); }
+}
+
+@keyframes pattern-move {
+    0% { background-position: 0 0; }
+    100% { background-position: 20px 20px; }
+}
+
+@keyframes flip-scale {
+    0% { transform: scale(1) rotateX(0); }
+    50% { transform: scale(1.5) rotateX(90deg); }
+    100% { transform: scale(1) rotateX(180deg); }
+}
+
+@keyframes bounce-flip {
+    0% { transform: scale(1) rotate(0); }
+    50% { transform: scale(1.2) rotate(180deg); }
+    100% { transform: scale(1) rotate(360deg); }
+}
+
+@keyframes octagon-spin {
+    100% { transform: rotate(180deg); }
+}
+
+@keyframes diagonal-slide {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(10px, -10px); }
+}
+
+@keyframes shake-opacity {
+    0%, 100% { opacity: 1; transform: translate(0); }
+    25% { opacity: 0.8; transform: translate(5px); }
+    75% { opacity: 0.8; transform: translate(-5px); }
+}
+
+@keyframes ripple-out {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3); }
+    100% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
+}
